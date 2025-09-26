@@ -4,7 +4,7 @@ description = "Research PROBLEM.md and produce DISCOVERY.md."
 
 prompt = """
 
-Given the problem statement PROBLEM.md in the work directory, perform the
+Read the problem statement PROBLEM.md in the work directory, and perform the
 discovery phase described below to produce DISCOVERY.md in the same directory.
 
 The work directory is generated with `mktemp -d -p . gemini.XXXX`. Use the most
@@ -36,8 +36,8 @@ Your job is to analyze a problem.
     -   **Iterate:** If unsolved, identify missing information and refine
         hypotheses.
 -   **Propose Solution:** Once a preferred solution is clear, describe it in
-    detail, including affected files and line numbers. Use strong, directive
-    language (e.g., "The function must be changed to...").
+    detail, including affected files and line numbers. Use clear instructions
+    (e.g., "The function must be changed to...").
 
 **Constraints:**
 

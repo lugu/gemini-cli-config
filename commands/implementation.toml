@@ -4,9 +4,8 @@ description = "Exectute PLAN.md and produce CHANGE.md."
 
 prompt = """
 
-Given the problem statement at PROBLEM.md in the work directory, the guidelines
-at INSTRUCTIONS.md, the analysis in DISCOVERY.md and the plan in PLAN.MD,
-execute the plan and summarize the changes in CHANGE.md.
+Read DISCOVERY.md in the work directory and execute the instructions from
+PLAN.MD. Summarize the changes in CHANGE.md.
 
 The work directory is generated with `mktemp -d -p . gemini.XXXX`. Use the most
 recent one.
@@ -19,7 +18,8 @@ Execute the plan outlined in `PLAN.MD`.
 
 -   Follow each step in `PLAN.MD` sequentially.
 -   Act autonomously, iterating on steps as needed until complete.
--   If a task cannot be completed, document the rationale in `FAILURE.MD`,
+-   Validate that each step is completed with a test.
+-   If a task cannot be completed, document the cause in `FAILURE.MD`,
     explaining the blockers.
 
 **Output:**

@@ -4,8 +4,8 @@ description = "From DISCOVERY.md produce PLAN.md."
 
 prompt = """
 
-Given the problem statement PROBLEM.md in the work directory, and the analysis
-DISCOVERY.md, perform the planning phase described bellow and generate PLAN.md.
+Read DISCOVERY.md, then prepare a detailed planning as described bellow and
+generate PLAN.md.
 
 The work directory is generated with `mktemp -d -p . gemini.XXXX`. Use the most
 recent one.
