@@ -4,9 +4,12 @@ description = "Exectute PLAN.md and produce CHANGE.md."
 
 prompt = """
 
-Given the problem statement at PROBLEM.md, the guidelines at INSTRUCTIONS.md,
-the analysis in DISCOVERY.md and the plan in PLAN.MD, execute the plan and
-summarize the changes in CHANGE.md.
+Given the problem statement at PROBLEM.md in the work directory, the guidelines
+at INSTRUCTIONS.md, the analysis in DISCOVERY.md and the plan in PLAN.MD,
+execute the plan and summarize the changes in CHANGE.md.
+
+The work directory is generated with `mktemp -d -p . gemini.XXXX`. Use the most
+recent one.
 
 ## Implementation phase Guidelines
 

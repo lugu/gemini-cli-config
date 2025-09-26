@@ -7,6 +7,9 @@ prompt = """
 Given the problem statement PROBLEM.md in the work directory, perform the
 discovery phase described below to produce DISCOVERY.md in the same directory.
 
+The work directory is generated with `mktemp -d -p . gemini.XXXX`. Use the most
+recent one.
+
 ## Phase 1: Discovery
 
 Your job is to analyze a problem.
