@@ -1,0 +1,30 @@
+# Invoked via: /implementation
+
+description = "Exectute PLAN.md and produce CHANGE.md."
+
+prompt = """
+
+Given the problem statement at PROBLEM.md, the guidelines at INSTRUCTIONS.md,
+the analysis in DISCOVERY.md and the plan in PLAN.MD, execute the plan and
+summarize the changes in CHANGE.md.
+
+## Implementation phase Guidelines
+
+Execute the plan outlined in `PLAN.MD`.
+
+**Key Activities:**
+
+-   Follow each step in `PLAN.MD` sequentially.
+-   Act autonomously, iterating on steps as needed until complete.
+-   If a task cannot be completed, document the rationale in `FAILURE.MD`,
+    explaining the blockers.
+
+**Output:**
+
+-   The implemented solution that has been verified.
+-   A markdown file (`gemini.XXXX/CHANGE.MD`) summarizing the changes. This
+    file is written in a way that it can be used to submit the change. It
+    explains the problem and described how the change solve the problem. The
+    first line of the file shall be a very concise description of the change
+    (less than 120 characters) followed by an empty line.
+"""

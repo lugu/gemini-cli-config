@@ -1,0 +1,6 @@
+
+# Invoked via: /initialize
+
+description = "Generate the work directory when PROBLEM.md will be placed"
+
+prompt = "!WORKDIR=`mktemp -d -p . gemini.XXXX` && touch $WORKDIR/PROBLEM.md"

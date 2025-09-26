@@ -1,0 +1,36 @@
+# Invoked via: /planning
+
+description = "From DISCOVERY.md produce PLAN.md."
+
+prompt = """
+
+Given the problem statement PROBLEM.md, and the analysis DISCOVERY.md, perform
+the planning phase described bellow and generate PLAN.md.
+
+## Phase 2: Planning
+
+Based on the output of the discovery phase (`DISCOVERY.MD`), create a concrete
+plan of action.
+
+**Key Activities:**
+
+-   **Analysis:** Given the solution described in `DISCOVERY.md`, identify
+		subparts that can be delivered independantly (ex: tests, code, documentation).
+-   **Task Breakdown:** Breakdown those deliverable into small tasks.
+-   **Verifiability:** Ensure each task has a clear way to verify its
+    completion.
+
+-   **Testing:** Each task should be verified. If the task include a code
+    change, a test should be written. Otherwise propose a way to verify that the
+    task was successfully completed.
+-   **Sequencing:** Order the tasks logically.
+-   **Final Steps:** The plan must conclude with:
+    -   A task to summarize the overall changes made.
+    -   A task to create `CHANGE.md`, suitable for a commit
+        message, explaining the problem and the implemented solution.
+
+**Output:**
+
+-   A markdown file (`PLAN.MD`) detailing the step-by-step plan.
+-   If `DISCOVERY.md` is missing, return a warning.
+"""

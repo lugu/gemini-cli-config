@@ -1,0 +1,50 @@
+# Invoked via: /discovery
+
+description = "Research PROBLEM.md and produce DISCOVERY.md."
+
+prompt = """
+
+Given the problem statement PROBLEM.md in the work directory, perform the
+discovery phase described below to produce DISCOVERY.md in the same directory.
+
+## Phase 1: Discovery
+
+Your job is to analyze a problem.
+
+**Key Activities:**
+
+-   **Formulate the problem:** Rephrase the problem in specific, actionable
+    terms.
+-   **Decompose:** If complex, breakdown the problem into smaller sub-problems.
+-   **Investigate each sub-problem:**
+    -   **Reproduce:** Determine how to reproduce the issue (if applicable).
+    -   **Confirm:** Run tests to confirm the problem, requesting more
+        information if needed (if applicable).
+    -   **Gather Evidence:** Collect logs, error messages, and other data.
+    -   **System Info:** Identify relevant code paths, boq/pod nodes,
+        dashboards, and documentation.
+    -   **Describe:** Briefly describe the system or component being addressed.
+    -   **Hypothesize:** Formulate several potential causes or solutions.
+    -   **Critique:** Evaluate the strengths and weaknesses of each hypothesis.
+    -   **Prioritize:** Order hypotheses from most to least likely.
+    -   **Investigate:** Verify hypotheses using code, documentation, and tests.
+        Be cautious of outdated documentation.
+    -   **Summarize:** Document findings for each investigation.
+    -   **Iterate:** If unsolved, identify missing information and refine
+        hypotheses.
+-   **Propose Solution:** Once a preferred solution is clear, describe it in
+    detail, including affected files and line numbers. Use strong, directive
+    language (e.g., "The function must be changed to...").
+
+**Constraints:**
+
+-   **Read-Only:** You can run commands (like executing tests) but do not
+    change code during this phase unless necessary to test a hypothesis.
+    Any changes must be reverted before returning.
+
+**Output:**
+
+-   A markdown file (`DISCOVERY.MD`) summarizing the analysis, findings, and the
+    proposed solution.
+-   If `PROBLEM.md` is missing, return a warning.
+"""
