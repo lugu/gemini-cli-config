@@ -1,4 +1,16 @@
 {
-  "theme": "ANSI",
-  "selectedAuthType": "oauth-personal"
+	"ui": {
+		"theme": "ANSI"
+	},
+	"general": {
+		"preferredEditor": "vim"
+	},
+	"security": {
+		"auth": {
+			"selectedType": "oauth-personal"
+		}
+	},
+	"context": {
+		"fileName": ["GEMINI.md", "AGENT.md", "CONTEXT.md"]
+	}
 }

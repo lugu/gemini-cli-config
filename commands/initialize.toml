@@ -1,6 +1,6 @@
 
 # Invoked via: /initialize
 
-description = "Generate the work directory when PROBLEM.md will be placed"
+description = "Create a work directory with an empty PROBLEM.md"
 
-prompt = "!WORKDIR=`mktemp -d -p . gemini.XXXX` && touch $WORKDIR/PROBLEM.md"
+prompt = "!/bin/sh -s ~/.gemini/scripts/initialize.sh"

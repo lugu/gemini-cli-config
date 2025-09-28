@@ -15,6 +15,9 @@ recent one.
 Based on the output of the discovery phase (`DISCOVERY.MD`), create a concrete
 plan of action.
 
+The purpose of this phase 2 is to breakdown the solution described in
+DISCOVERY.md into steps that will be later executed.
+
 **Key Activities:**
 
 -   **Analysis:** Given the solution described in `DISCOVERY.md`, identify
